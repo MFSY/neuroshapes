@@ -8,3 +8,12 @@ branches:
   only:
     - master
     - simulation_schemas
+deploy:
+  provider: bintray
+  file: "Path to a descriptor file, containing information for the Bintray upload"
+  user: "mfsy"
+  key:
+    secure: "TbmBIojS839OueYW00yq9t4PkgFDQNRRubSMmqn/6H+KzKKWohi5ldFQtToGhTn2lq6ysmmwtepah4IpBjJyVc1nWXE86HJK96lbU4r4IcRFH9kkktvTz+Hcl4UlH4YVw4acS6LCj0GE5xCEGxGgw5jnw9YtyATGPO/s/baHy6tv3/4okt+XdS7UQTo3rLQVh6o3mWNHeyVJFHKKUJTWUF0AwZGcZLX0gJ5UDKEf1uKi8OiDX4XYiu97s5wz5W76V3a7wlCvkX0uwBaxZRTwIurcM/SLz/xqccow++iWkXuT1Hr5ydU1DJLzGQd2dvgxu6YF8fdsYXnwgTBx2hWrGqB7XCEGUjfjYMuciaAdaFcIAtLQpiVTPmPKCCp8u2d9b7+6OLF/kzD7Q0sYRkXHkwr8gp5FYPkQo+Kquf/Fj8G7G+B9Cf+fYt5WQZNjTF3+6BrmBeKiro9+PwsOKvWB/P67jaMJAXuNWKUYTvWxJiyFFbajtTgCPDcHOuKYxwJHQKdx0+P3D73oNdAOFZW9k+/1TNuBBLuITNV+FsqHvnREk07abXNZyrT6JyrAPd9j5ypj+8ZF61IUuOs3ntwo+AvYrKZmjKPMn9giAjTi8tZ1oajw7vr2/2HJLZHw4iY9mxmVUTTkLaoYaCcXg2/0frG1hhRNVSQzzPiNelNe9pQ="
+  skip_cleanup: true # to upload artifacts created during the build
+  on:
+    tags: true
